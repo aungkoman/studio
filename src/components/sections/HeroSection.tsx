@@ -20,9 +20,9 @@ export default function HeroSection() {
         priority
       />
       <div className="relative z-10 section-container text-center py-20 md:py-32">
-        <AnimatedSection 
-          as="div" 
-          className="flex items-center justify-center space-x-1 sm:space-x-2 md:space-x-4 mb-6" 
+        <AnimatedSection
+          as="div"
+          className="flex items-center justify-center space-x-1 sm:space-x-2 md:space-x-4 mb-6"
           animationClassName="opacity-0 translate-y-10"
           style={{ transitionDelay: '0ms' }}
         >
@@ -45,30 +45,30 @@ export default function HeroSection() {
           </AnimatedSection>
         </AnimatedSection>
 
-        <AnimatedSection 
-          as="p" 
-          className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-primary-foreground/90" 
-          animationClassName="opacity-0 translate-y-10" 
+        <AnimatedSection
+          as="p"
+          className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-primary-foreground/90"
+          animationClassName="opacity-0 translate-y-10"
           style={{ transitionDelay: '1400ms' }}
         >
-          We are a creative software house dedicated to building innovative digital solutions that bring your vision to life.
+          Tech Software 100 is a creative software house dedicated to building innovative digital solutions that bring your vision to life.
         </AnimatedSection>
 
-        <AnimatedSection 
-          as="div" 
-          className="flex flex-col sm:flex-row gap-4 justify-center" 
-          animationClassName="opacity-0 translate-y-10" 
+        <AnimatedSection
+          as="div"
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+          animationClassName="opacity-0 translate-y-10"
           style={{ transitionDelay: '1600ms' }}
         >
           <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Link href="#contact">Discuss Your Project</Link>
           </Button>
-          <Button variant="outline" size="lg" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Link href="#projects">See Our Work</Link>
           </Button>
         </AnimatedSection>
       </div>
-      
+
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-primary-foreground/70"><path d="m6 9 6 6 6-6"/></svg>
       </div>
