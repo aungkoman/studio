@@ -23,26 +23,24 @@ export default function HeroSection() {
         <AnimatedSection 
           as="div" 
           className="flex items-center justify-center space-x-1 sm:space-x-2 md:space-x-4 mb-6" 
-          animationClassName="opacity-0 translate-y-10" // This is the container for H1 and icons
-          style={{ transitionDelay: '0ms' }} // Container itself animates quickly or with no delay relative to parent
+          animationClassName="opacity-0 translate-y-10"
+          style={{ transitionDelay: '0ms' }}
         >
           <AnimatedSection as="span" animationClassName="opacity-0 -translate-y-10" style={{ transitionDelay: '200ms' }}>
             <Lightbulb className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-accent" />
           </AnimatedSection>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '400ms' }}>Idea</AnimatedSection>
+            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '400ms' }}>Turning</AnimatedSection>
             {' '}
-            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '600ms' }}>ကနေ</AnimatedSection>
+            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '600ms' }}>Ideas</AnimatedSection>
             {' '}
-            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '800ms' }}>Reality</AnimatedSection>
+            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '800ms' }}>into</AnimatedSection>
             {' '}
-            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '1000ms' }}>ကို</AnimatedSection>
-            {' '}
-            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '1200ms' }}>ပြောင်းဖို့</AnimatedSection>
+            <AnimatedSection as="span" className="inline-block" animationClassName="opacity-0 scale-50" style={{ transitionDelay: '1000ms' }}>Reality.</AnimatedSection>
           </h1>
 
-          <AnimatedSection as="span" animationClassName="opacity-0 translate-y-10" style={{ transitionDelay: '1400ms' }}>
+          <AnimatedSection as="span" animationClassName="opacity-0 translate-y-10" style={{ transitionDelay: '1200ms' }}>
             <Rocket className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-accent" />
           </AnimatedSection>
         </AnimatedSection>
@@ -51,16 +49,16 @@ export default function HeroSection() {
           as="p" 
           className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-primary-foreground/90" 
           animationClassName="opacity-0 translate-y-10" 
-          style={{ transitionDelay: '1600ms' }}
+          style={{ transitionDelay: '1400ms' }}
         >
-          Turning Ideas into Reality. We are a creative software house dedicated to building innovative digital solutions that bring your vision to life.
+          We are a creative software house dedicated to building innovative digital solutions that bring your vision to life.
         </AnimatedSection>
 
         <AnimatedSection 
           as="div" 
           className="flex flex-col sm:flex-row gap-4 justify-center" 
           animationClassName="opacity-0 translate-y-10" 
-          style={{ transitionDelay: '1800ms' }}
+          style={{ transitionDelay: '1600ms' }}
         >
           <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Link href="#contact">Discuss Your Project</Link>

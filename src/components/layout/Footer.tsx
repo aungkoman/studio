@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-center md:text-left">
             &copy; {currentYear} Tech Software 100 (Soft100). All rights reserved. <br />
-            Idea ကနေ Reality ကို ပြောင်းဖို့ (Turning Ideas into Reality)
+            Turning Ideas into Reality.
           </p>
           <div className="flex space-x-4">
             <Link href="#" aria-label="Twitter" className="text-secondary-foreground hover:text-primary transition-colors">
