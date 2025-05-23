@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -5,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X, Code } from 'lucide-react'; // Using Code as a placeholder logo
+import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '#home', label: 'Home' },
@@ -19,20 +21,59 @@ const navItems = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSectionId, setActiveSectionId] = useState(navItems.length > 0 ? navItems[0].href : '');
 
   useEffect(() => {
+    const headerElement = document.getElementById('home'); // The header itself has id="home"
+    const headerHeight = headerElement ? headerElement.offsetHeight : 80; // Fallback height
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      let currentActiveSectionId = '';
+      // Iterate from bottom to top for correct highlighting
+      for (let i = navItems.length - 1; i >= 0; i--) {
+        const item = navItems[i];
+        const elementId = item.href.substring(1); // Remove '#'
+        const sectionElement = document.getElementById(elementId);
+
+        if (sectionElement) {
+          // Adjust sectionTop by headerHeight and a small buffer (e.g., 10px)
+          // This makes the link active when the section top is just below the sticky header
+          const sectionTop = sectionElement.offsetTop - headerHeight - 10;
+          
+          if (window.scrollY >= sectionTop) {
+            currentActiveSectionId = item.href;
+            break; // Found the current section
+          }
+        }
+      }
+      
+      // If scrolled to the very top, or no section is "active" yet by the logic above
+      // (e.g., when above the first actual content section but below the header's fold)
+      // default to the first nav item.
+      if (window.scrollY < headerHeight && navItems.length > 0) {
+        currentActiveSectionId = navItems[0].href;
+      }
+      
+      // If no section is matched (e.g., scrolled past the last section a bit but not enough for footer logic)
+      // and we have navItems, stick to the last known active or default to first if nothing.
+      // This part might need refinement based on specific page end behavior.
+      // For now, if nothing is found, keep the last active one or default to the first item.
+      setActiveSectionId(currentActiveSectionId || (navItems.length > 0 ? navItems[0].href : ''));
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check on mount
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, []); // Empty dependency array, navItems is stable within this component's scope
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header 
-      id="home" 
+      id="home" // This ID is used by the 'Home' nav link and for calculating headerHeight
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-background/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
@@ -47,7 +88,15 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-2 lg:space-x-4">
             {navItems.map((item) => (
-              <Button key={item.label} variant="ghost" asChild className="text-foreground hover:text-primary hover:bg-primary/10">
+              <Button 
+                key={item.label} 
+                variant="ghost" 
+                asChild 
+                className={cn(
+                  "text-foreground hover:text-primary hover:bg-primary/10",
+                  activeSectionId === item.href && "text-primary font-semibold underline underline-offset-4 decoration-accent decoration-2"
+                )}
+              >
                 <Link href={item.href}>{item.label}</Link>
               </Button>
             ))}
@@ -79,7 +128,10 @@ export default function Header() {
                       key={item.label}
                       variant="ghost"
                       asChild
-                      className="w-full justify-start text-lg text-foreground hover:text-primary hover:bg-primary/10"
+                      className={cn(
+                        "w-full justify-start text-lg text-foreground hover:text-primary hover:bg-primary/10",
+                        activeSectionId === item.href && "text-primary font-semibold bg-primary/10"
+                      )}
                       onClick={closeMobileMenu}
                     >
                       <Link href={item.href}>{item.label}</Link>
