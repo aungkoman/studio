@@ -17,8 +17,8 @@ const geistSans = Geist({
 // });
 
 export const metadata: Metadata = {
-  title: 'Soft100 - Turning Ideas into Reality',
-  description: 'Tech Software 100 is a creative software house dedicated to building innovative digital solutions that bring your vision to life.',
+  title: 'Soft100: Turning Ideas into Reality',
+  description: 'Turning Ideas into Reality. Tech Software 100 is a creative software house dedicated to building innovative digital solutions that bring your vision to life.',
 };
 
 export default function RootLayout({

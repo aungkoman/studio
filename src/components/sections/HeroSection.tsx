@@ -53,7 +53,7 @@ export default function HeroSection() {
           animationClassName="opacity-0 translate-y-10" 
           style={{ transitionDelay: '1600ms' }}
         >
-          We are a creative software house dedicated to building innovative digital solutions that bring your vision to life.
+          Turning Ideas into Reality. We are a creative software house dedicated to building innovative digital solutions that bring your vision to life.
         </AnimatedSection>
 
         <AnimatedSection 
