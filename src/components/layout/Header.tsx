@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X, Code } from 'lucide-react'; // Using Code as a placeholder logo
+import { Menu, Code } from 'lucide-react'; // Using Code as a placeholder logo, removed X as it's provided by SheetContent
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -56,10 +56,6 @@ export default function Header() {
         currentActiveSectionId = navItems[0].href;
       }
       
-      // If no section is matched (e.g., scrolled past the last section a bit but not enough for footer logic)
-      // and we have navItems, stick to the last known active or default to first if nothing.
-      // This part might need refinement based on specific page end behavior.
-      // For now, if nothing is found, keep the last active one or default to the first item.
       setActiveSectionId(currentActiveSectionId || (navItems.length > 0 ? navItems[0].href : ''));
     };
 
@@ -67,13 +63,13 @@ export default function Header() {
     handleScroll(); // Initial check on mount
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // Empty dependency array, navItems is stable within this component's scope
+  }, []); 
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <header 
-      id="home" // This ID is used by the 'Home' nav link and for calculating headerHeight
+      id="home" 
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-background/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
@@ -117,10 +113,7 @@ export default function Header() {
                     <Code className="h-7 w-7" />
                     <span>Soft100</span>
                   </Link>
-                  <Button variant="ghost" size="icon" onClick={closeMobileMenu}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
+                  {/* The explicit X button was here and has been removed. SheetContent provides its own. */}
                 </div>
                 <nav className="flex flex-col space-y-3">
                   {navItems.map((item) => (
