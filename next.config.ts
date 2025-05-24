@@ -21,7 +21,8 @@ const nextConfig: NextConfig = {
       'upload.wikimedia.org',
       'images.unsplash.com',
       'pinepointtech.com',
-      'images.pexels.com'
+      'images.pexels.com',
+      'plus.unsplash.com'
     ]
   },
 };

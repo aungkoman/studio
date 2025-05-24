@@ -6,10 +6,43 @@ import Link from "next/link";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
+// const blogPosts = [
+//   {
+//     image: "https://placehold.co/600x400/4681C3/FFFFFF",
+//     dataAiHint: "technology article",
+//     title: "The Future of Web Development: Trends to Watch in 2024",
+//     excerpt: "Explore the latest advancements and upcoming trends shaping the future of web development, from AI integration to serverless architectures.",
+//     author: "Dr. Web Dev",
+//     date: "October 26, 2023",
+//     category: "Web Development",
+//     link: "#",
+//   },
+//   {
+//     image: "https://placehold.co/600x400/82CA9D/FFFFFF",
+//     dataAiHint: "mobile technology",
+//     title: "Crafting Seamless User Experiences in Mobile Apps",
+//     excerpt: "A deep dive into the principles of UI/UX design for mobile applications that keep users engaged and satisfied.",
+//     author: "UX Guru",
+//     date: "October 15, 2023",
+//     category: "Mobile Apps",
+//     link: "#",
+//   },
+//   {
+//     image: "https://placehold.co/600x400/A0AEC0/FFFFFF",
+//     dataAiHint: "cloud computing",
+//     title: "Maximizing Efficiency with Cloud-Native Solutions",
+//     excerpt: "Discover how cloud-native architectures can transform your business, offering scalability, resilience, and cost-effectiveness.",
+//     author: "Cloud Architect",
+//     date: "September 28, 2023",
+//     category: "Cloud Solutions",
+//     link: "#",
+//   },
+// ];
+
 const blogPosts = [
   {
-    image: "https://placehold.co/600x400/4681C3/FFFFFF",
-    dataAiHint: "technology article",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&fit=cover",
+    dataAiHint: "web development code screen",
     title: "The Future of Web Development: Trends to Watch in 2024",
     excerpt: "Explore the latest advancements and upcoming trends shaping the future of web development, from AI integration to serverless architectures.",
     author: "Dr. Web Dev",
@@ -18,8 +51,8 @@ const blogPosts = [
     link: "#",
   },
   {
-    image: "https://placehold.co/600x400/82CA9D/FFFFFF",
-    dataAiHint: "mobile technology",
+    image: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&fit=cover",
+    dataAiHint: "mobile app ui design",
     title: "Crafting Seamless User Experiences in Mobile Apps",
     excerpt: "A deep dive into the principles of UI/UX design for mobile applications that keep users engaged and satisfied.",
     author: "UX Guru",
@@ -28,16 +61,17 @@ const blogPosts = [
     link: "#",
   },
   {
-    image: "https://placehold.co/600x400/A0AEC0/FFFFFF",
-    dataAiHint: "cloud computing",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&fit=cover",
+    dataAiHint: "cloud computing data center",
     title: "Maximizing Efficiency with Cloud-Native Solutions",
     excerpt: "Discover how cloud-native architectures can transform your business, offering scalability, resilience, and cost-effectiveness.",
     author: "Cloud Architect",
     date: "September 28, 2023",
     category: "Cloud Solutions",
     link: "#",
-  },
+  }
 ];
+
 
 export default function BlogSection() {
   return (

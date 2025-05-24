@@ -138,8 +138,23 @@ export default function ContactSection() {
             </div>
 
             {/* Placeholder for Google Map embed */}
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center text-muted-foreground shadow-inner">
+            {/* <div className="aspect-video bg-muted rounded-lg flex items-center justify-center text-muted-foreground shadow-inner">
               <MapPin className="h-10 w-10 mr-2"/> Google Map Placeholder
+            </div> */}
+            {/* Real Google Maps Embed */}
+            <div className="aspect-video rounded-lg overflow-hidden shadow-inner">
+              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1724116956307!2d96.15154427570495!3d19.832656527782458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c8b8ad686cdd77%3A0xc831d34b5a62741b!2sMyat%20Lay-3%20St%2C%20Myanmar%20(Burma)!5e0!3m2!1sen!2ssg!4v1748065794673!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1724116956307!2d96.15154427570495!3d19.832656527782458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c8b8ad686cdd77%3A0xc831d34b5a62741b!2sMyat%20Lay-3%20St%2C%20Myanmar%20(Burma)!5e0!3m2!1sen!2ssg!4v1748065794673!5m2!1sen!2ssg"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+                aria-label="Google Maps location of our office"
+              ></iframe>
             </div>
           </AnimatedSection>
         </div>
