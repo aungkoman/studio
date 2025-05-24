@@ -17,7 +17,10 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    domains: ['upload.wikimedia.org']
+    domains: [
+      'upload.wikimedia.org',
+      'images.unsplash.com'
+    ]
   },
 };
 

@@ -5,29 +5,54 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
+// const projects = [
+//   {
+//     thumbnail: "https://placehold.co/600x400/4681C3/FFFFFF",
+//     dataAiHint: "web application",
+//     name: "E-commerce Platform",
+//     description: "A scalable e-commerce solution with advanced features.",
+//     outcome: "Increased sales by 30% within 6 months.",
+//   },
+//   {
+//     thumbnail: "https://placehold.co/600x400/82CA9D/FFFFFF",
+//     dataAiHint: "mobile app",
+//     name: "Project Management App",
+//     description: "A mobile app for efficient team collaboration and task tracking.",
+//     outcome: "Improved team productivity by 20%.",
+//   },
+//   {
+//     thumbnail: "https://placehold.co/600x400/A0AEC0/FFFFFF",
+//     dataAiHint: "data dashboard",
+//     name: "Data Analytics Dashboard",
+//     description: "An interactive dashboard for visualizing complex business data.",
+//     outcome: "Enabled data-driven decision making.",
+//   },
+// ];
+
 const projects = [
   {
-    thumbnail: "https://placehold.co/600x400/4681C3/FFFFFF",
+    thumbnail: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
     dataAiHint: "web application",
     name: "E-commerce Platform",
     description: "A scalable e-commerce solution with advanced features.",
     outcome: "Increased sales by 30% within 6 months.",
   },
   {
-    thumbnail: "https://placehold.co/600x400/82CA9D/FFFFFF",
+    thumbnail: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
     dataAiHint: "mobile app",
     name: "Project Management App",
     description: "A mobile app for efficient team collaboration and task tracking.",
     outcome: "Improved team productivity by 20%.",
   },
   {
-    thumbnail: "https://placehold.co/600x400/A0AEC0/FFFFFF",
+    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
     dataAiHint: "data dashboard",
     name: "Data Analytics Dashboard",
     description: "An interactive dashboard for visualizing complex business data.",
     outcome: "Enabled data-driven decision making.",
   },
 ];
+
 
 export default function FeaturedProjectsSection() {
   return (
