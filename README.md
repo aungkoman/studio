@@ -27,3 +27,29 @@ Build Error တက်နေတာကို ဘယ်လိုရှင်းမ�
 This is a NextJS starter in Firebase Studio.
 
 To get started, take a look at src/app/page.tsx.
+
+
+## Firebase Deployment
+
+software100.com.mm -> 199.36.158.100
+
+
+## Vercel Deployment
+
+software100.com.mm -> 199.36.158.100
+
+https://studio-beta-kohl.vercel.app/
+
+Type	Name	Value	Proxy
+
+
+A	
+@
+76.76.21.21
+Disabled
+
+
+CNAME	
+www
+cname.vercel-dns.com.
+Disabled
