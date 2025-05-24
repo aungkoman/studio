@@ -6,12 +6,57 @@ import Link from "next/link";
 import { ExternalLink, Eye } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
+// const projects = [
+//   {
+//     title: "Enterprise CRM System",
+//     client: "Global Corp Inc.",
+//     category: "Web App",
+//     thumbnail: "https://placehold.co/800x600/4681C3/FFFFFF",
+//     dataAiHint: "crm dashboard",
+//     overview: "A comprehensive CRM system designed to streamline sales and customer relations for a large enterprise.",
+//     challenge: "Needed a unified platform to manage a growing customer base and complex sales pipelines.",
+//     solution: "Developed a custom, scalable web-based CRM with modules for contact management, sales automation, reporting, and analytics.",
+//     features: ["Lead Management", "Sales Funnel Tracking", "Automated Reporting", "Third-party Integrations"],
+//     tech: ["React", "Node.js", "PostgreSQL", "AWS"],
+//     impact: "Reduced lead processing time by 40% and improved sales team efficiency by 25%.",
+//     liveLink: "#"
+//   },
+//   {
+//     title: "Healthcare Mobile App",
+//     client: "MediConnect Solutions",
+//     category: "Mobile App",
+//     thumbnail: "https://placehold.co/800x600/82CA9D/FFFFFF",
+//     dataAiHint: "health app interface",
+//     overview: "A patient-centric mobile application for appointment scheduling, health record access, and telemedicine.",
+//     challenge: "Improve patient access to healthcare services and streamline communication with providers.",
+//     solution: "Built native iOS and Android apps with secure data handling, real-time chat, and video consultation features.",
+//     features: ["Appointment Booking", "EHR Access", "Secure Messaging", "Video Calls", "Prescription Refills"],
+//     tech: ["Swift", "Kotlin", "Firebase", "WebRTC"],
+//     impact: "Increased patient engagement by 50% and reduced no-show rates for appointments.",
+//     liveLink: "#"
+//   },
+//   {
+//     title: "AI-Powered Analytics Platform",
+//     client: "Data Insights Ltd.",
+//     category: "Web App",
+//     thumbnail: "https://placehold.co/800x600/A0AEC0/FFFFFF",
+//     dataAiHint: "analytics graph",
+//     overview: "A sophisticated platform using AI/ML to provide predictive analytics and business intelligence.",
+//     challenge: "Extract actionable insights from vast amounts of unstructured data.",
+//     solution: "Created a web platform with advanced data visualization tools, machine learning models for forecasting, and customizable dashboards.",
+//     features: ["Predictive Modeling", "Anomaly Detection", "Interactive Dashboards", "Natural Language Processing"],
+//     tech: ["Python (Django)", "TensorFlow", "D3.js", "Elasticsearch"],
+//     impact: "Enabled clients to identify new market trends 2X faster and optimize operations.",
+//     liveLink: "#"
+//   }
+// ];
+
 const projects = [
   {
     title: "Enterprise CRM System",
     client: "Global Corp Inc.",
     category: "Web App",
-    thumbnail: "https://placehold.co/800x600/4681C3/FFFFFF",
+    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
     dataAiHint: "crm dashboard",
     overview: "A comprehensive CRM system designed to streamline sales and customer relations for a large enterprise.",
     challenge: "Needed a unified platform to manage a growing customer base and complex sales pipelines.",
@@ -25,7 +70,7 @@ const projects = [
     title: "Healthcare Mobile App",
     client: "MediConnect Solutions",
     category: "Mobile App",
-    thumbnail: "https://placehold.co/800x600/82CA9D/FFFFFF",
+    thumbnail: "https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1600",
     dataAiHint: "health app interface",
     overview: "A patient-centric mobile application for appointment scheduling, health record access, and telemedicine.",
     challenge: "Improve patient access to healthcare services and streamline communication with providers.",
@@ -39,7 +84,7 @@ const projects = [
     title: "AI-Powered Analytics Platform",
     client: "Data Insights Ltd.",
     category: "Web App",
-    thumbnail: "https://placehold.co/800x600/A0AEC0/FFFFFF",
+    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80",
     dataAiHint: "analytics graph",
     overview: "A sophisticated platform using AI/ML to provide predictive analytics and business intelligence.",
     challenge: "Extract actionable insights from vast amounts of unstructured data.",
@@ -50,7 +95,6 @@ const projects = [
     liveLink: "#"
   }
 ];
-
 export default function PortfolioSection() {
   // TODO: Implement filtering/sorting if needed
   return (
