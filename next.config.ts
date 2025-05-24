@@ -19,7 +19,9 @@ const nextConfig: NextConfig = {
     ],
     domains: [
       'upload.wikimedia.org',
-      'images.unsplash.com'
+      'images.unsplash.com',
+      'pinepointtech.com',
+      'images.pexels.com'
     ]
   },
 };

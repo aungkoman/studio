@@ -3,28 +3,52 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Zap, Eye, Brain } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
+// const teamMembers = [
+//   {
+//     photo: "https://placehold.co/300x300/D4E2F2/4681C3",
+//     dataAiHint: "professional portrait",
+//     name: "Yan Naing",
+//     role: "CEO & Founder",
+//     bio: "Visionary leader with a passion for technology and innovation.",
+//   },
+//   {
+//     photo: "https://placehold.co/300x300/D4E2F2/82CA9D",
+//     dataAiHint: "software developer",
+//     name: "Su Myat",
+//     role: "Lead Developer",
+//     bio: "Expert architect of robust and scalable software solutions.",
+//   },
+//   {
+//     photo: "https://placehold.co/300x300/D4E2F2/A0AEC0",
+//     dataAiHint: "ux designer",
+//     name: "Aung Ko",
+//     role: "Head of Design",
+//     bio: "Creative mind focused on user-centric and impactful design.",
+//   },
+// ];
+
 const teamMembers = [
   {
-    photo: "https://placehold.co/300x300/D4E2F2/4681C3",
+    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
     dataAiHint: "professional portrait",
     name: "Yan Naing",
     role: "CEO & Founder",
     bio: "Visionary leader with a passion for technology and innovation.",
   },
   {
-    photo: "https://placehold.co/300x300/D4E2F2/82CA9D",
+    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
     dataAiHint: "software developer",
     name: "Su Myat",
     role: "Lead Developer",
     bio: "Expert architect of robust and scalable software solutions.",
   },
   {
-    photo: "https://placehold.co/300x300/D4E2F2/A0AEC0",
+    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
     dataAiHint: "ux designer",
     name: "Aung Ko",
     role: "Head of Design",
     bio: "Creative mind focused on user-centric and impactful design.",
-  },
+  }
 ];
 
 const coreValues = [
@@ -43,7 +67,7 @@ export default function AboutUsSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <AnimatedSection animationClassName="opacity-0 -translate-x-10" once={true} as="div">
             <Image
-              src="https://placehold.co/600x400/4681C3/FFFFFF"
+              src="https://pinepointtech.com/wp-content/uploads/2020/03/Website.jpg"
               alt="Tech Software 100 Team"
               width={600}
               height={400}
