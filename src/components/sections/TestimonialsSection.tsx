@@ -3,14 +3,43 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
+// const testimonials = [
+//   {
+//     quote: "Tech Software 100 transformed our operations with their custom software. Their team is knowledgeable, responsive, and truly understood our needs. Highly recommended!",
+//     clientName: "Jane Doe",
+//     clientCompany: "Innovatech Solutions",
+//     clientRole: "CEO",
+//     clientPhoto: "https://placehold.co/100x100/4681C3/FFFFFF",
+//     dataAiHint: "professional woman",
+//     rating: 5,
+//   },
+//   {
+//     quote: "The mobile app developed by Soft100 has significantly boosted our customer engagement. Their attention to detail and UI/UX expertise is top-notch.",
+//     clientName: "John Smith",
+//     clientCompany: "ConnectApp Ltd.",
+//     clientRole: "Marketing Director",
+//     clientPhoto: "https://placehold.co/100x100/82CA9D/FFFFFF",
+//     dataAiHint: "smiling man",
+//     rating: 5,
+//   },
+//   {
+//     quote: "Working with Tech Software 100 on our web platform was a fantastic experience. They delivered on time, within budget, and exceeded our expectations.",
+//     clientName: "Alice Brown",
+//     clientCompany: "WebWorks Co.",
+//     clientRole: "Project Manager",
+//     clientPhoto: "https://placehold.co/100x100/A0AEC0/FFFFFF",
+//     dataAiHint: "business person",
+//     rating: 4,
+//   },
+// ];
 const testimonials = [
   {
     quote: "Tech Software 100 transformed our operations with their custom software. Their team is knowledgeable, responsive, and truly understood our needs. Highly recommended!",
     clientName: "Jane Doe",
     clientCompany: "Innovatech Solutions",
     clientRole: "CEO",
-    clientPhoto: "https://placehold.co/100x100/4681C3/FFFFFF",
-    dataAiHint: "professional woman",
+    clientPhoto: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    dataAiHint: "professional woman executive portrait",
     rating: 5,
   },
   {
@@ -18,8 +47,8 @@ const testimonials = [
     clientName: "John Smith",
     clientCompany: "ConnectApp Ltd.",
     clientRole: "Marketing Director",
-    clientPhoto: "https://placehold.co/100x100/82CA9D/FFFFFF",
-    dataAiHint: "smiling man",
+    clientPhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&fit=facearea",
+    dataAiHint: "smiling business man portrait",
     rating: 5,
   },
   {
@@ -27,12 +56,11 @@ const testimonials = [
     clientName: "Alice Brown",
     clientCompany: "WebWorks Co.",
     clientRole: "Project Manager",
-    clientPhoto: "https://placehold.co/100x100/A0AEC0/FFFFFF",
-    dataAiHint: "business person",
+    clientPhoto: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    dataAiHint: "professional woman smiling portrait",
     rating: 4,
   },
 ];
-
 export default function TestimonialsSection() {
   return (
     <AnimatedSection id="testimonials" className="bg-secondary">

@@ -89,7 +89,7 @@ export default function AboutUsSection() {
         <AnimatedSection animationClassName="opacity-0 translate-y-10" once={true} as="div" className="mb-16">
           <h3 className="text-2xl font-semibold text-center mb-8">Our Story & Core Values</h3>
           <p className="max-w-3xl mx-auto text-center mb-8">
-            Founded on the principle of "Idea ကနေ Reality ကို ပြောင်းဖို့" (Turning Ideas into Reality), Tech Software 100 began with a small team of passionate technologists. Today, we've grown into a dynamic software house, driven by our core values:
+            Founded on the principle of "Turning Ideas into Reality", Tech Software 100 began with a small team of passionate technologists. Today, we've grown into a dynamic software house, driven by our core values:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
             {coreValues.map(value => (
