@@ -4,8 +4,8 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Code } from 'lucide-react'; // Using Code as a placeholder logo, removed X as it's provided by SheetContent
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'; // Added SheetTitle
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -24,34 +24,28 @@ export default function Header() {
   const [activeSectionId, setActiveSectionId] = useState(navItems.length > 0 ? navItems[0].href : '');
 
   useEffect(() => {
-    const headerElement = document.getElementById('home'); // The header itself has id="home"
-    const headerHeight = headerElement ? headerElement.offsetHeight : 80; // Fallback height
+    const headerElement = document.getElementById('home'); 
+    const headerHeight = headerElement ? headerElement.offsetHeight : 80; 
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
       let currentActiveSectionId = '';
-      // Iterate from bottom to top for correct highlighting
       for (let i = navItems.length - 1; i >= 0; i--) {
         const item = navItems[i];
-        const elementId = item.href.substring(1); // Remove '#'
+        const elementId = item.href.substring(1); 
         const sectionElement = document.getElementById(elementId);
 
         if (sectionElement) {
-          // Adjust sectionTop by headerHeight and a small buffer (e.g., 10px)
-          // This makes the link active when the section top is just below the sticky header
           const sectionTop = sectionElement.offsetTop - headerHeight - 10;
           
           if (window.scrollY >= sectionTop) {
             currentActiveSectionId = item.href;
-            break; // Found the current section
+            break; 
           }
         }
       }
       
-      // If scrolled to the very top, or no section is "active" yet by the logic above
-      // (e.g., when above the first actual content section but below the header's fold)
-      // default to the first nav item.
       if (window.scrollY < headerHeight && navItems.length > 0) {
         currentActiveSectionId = navItems[0].href;
       }
@@ -60,7 +54,7 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial check on mount
+    handleScroll(); 
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []); 
@@ -77,10 +71,7 @@ export default function Header() {
       <div className="section-container py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
-            {/* <Code className="h-8 w-8" /> */}
             <img src="./company-icon.png" alt="Soft100 Logo" className="h-8" />
-             
-            {/* <span>Soft100</span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -110,14 +101,11 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle> {/* Added sr-only title */}
                 <div className="flex justify-between items-center mb-6">
                   <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary" onClick={closeMobileMenu}>
-                    {/* <Code className="h-7 w-7" /> */}
                     <img src="./company-icon.png" alt="Soft100 Logo" className="h-8" />
-             
-                    {/* <span>Soft100</span> */}
                   </Link>
-                  {/* The explicit X button was here and has been removed. SheetContent provides its own. */}
                 </div>
                 <nav className="flex flex-col space-y-3">
                   {navItems.map((item) => (
