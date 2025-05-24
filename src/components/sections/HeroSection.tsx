@@ -11,7 +11,9 @@ export default function HeroSection() {
       className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary text-primary-foreground min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden"
     >
       <Image
-        src="https://placehold.co/1920x1080/D4E2F2/4681C3"
+        // src="https://placehold.co/1920x1080/D4E2F2/4681C3"
+        // src="https://console.kr-asia.com/wp-content/uploads/2020/08/harish-shivaraman-pXzvJeuFgd0-unsplash-scaled.jpg"
+        src="https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Abstract Background"
         layout="fill"
         objectFit="cover"

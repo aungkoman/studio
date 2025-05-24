@@ -77,8 +77,10 @@ export default function Header() {
       <div className="section-container py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
-            <Code className="h-8 w-8" />
-            <span>Soft100</span>
+            {/* <Code className="h-8 w-8" /> */}
+            <img src="./company-icon.png" alt="Soft100 Logo" className="h-8" />
+             
+            {/* <span>Soft100</span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -110,8 +112,10 @@ export default function Header() {
               <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
                 <div className="flex justify-between items-center mb-6">
                   <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary" onClick={closeMobileMenu}>
-                    <Code className="h-7 w-7" />
-                    <span>Soft100</span>
+                    {/* <Code className="h-7 w-7" /> */}
+                    <img src="./company-icon.png" alt="Soft100 Logo" className="h-8" />
+             
+                    {/* <span>Soft100</span> */}
                   </Link>
                   {/* The explicit X button was here and has been removed. SheetContent provides its own. */}
                 </div>

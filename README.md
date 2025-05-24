@@ -16,6 +16,12 @@ Home Page မှာ
 - Project Listing
 
 
+## CI/CD အတွက် Vercel ကိုသုံးမယ်။ 
+
+Build Error တက်နေတာကို ဘယ်လိုရှင်းမလဲ 
+မလိုတဲ့ library တွေ ဖြုတ်နိုင်မလား?
+
+
 ## Firebase Studio
 
 This is a NextJS starter in Firebase Studio.
