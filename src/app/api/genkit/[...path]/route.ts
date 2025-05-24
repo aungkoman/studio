@@ -1,6 +1,7 @@
 import {NextRequest} from 'next/server';
 import {createNextGenkitHandler} from '@genkit-ai/next';
-import '@/ai/flows/testimonial-generator'; // Ensure flows are loaded
+// Ensure flows are loaded - currently no flows are explicitly imported here
+// If you add new flows, import them here: e.g. import '@/ai/flows/your-flow-name';
 
 export const maxDuration = 60;
 

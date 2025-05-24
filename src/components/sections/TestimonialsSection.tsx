@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Star, MessageCircle } from "lucide-react";
-import TestimonialGenerator from "@/components/TestimonialGenerator";
+import { Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const testimonials = [
@@ -77,18 +76,6 @@ export default function TestimonialsSection() {
             </AnimatedSection>
           ))}
         </div>
-
-        <AnimatedSection animationClassName="opacity-0 translate-y-10" once={true} as="div" className="bg-card p-8 md:p-12 rounded-lg shadow-xl">
-          <div className="text-center mb-8">
-            <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold">Generate a Testimonial</h3>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Need help crafting a testimonial for our services? Use our AI-powered tool to get started!
-              (This is a demo tool for showcasing AI integration).
-            </p>
-          </div>
-          <TestimonialGenerator />
-        </AnimatedSection>
       </div>
     </AnimatedSection>
   );
